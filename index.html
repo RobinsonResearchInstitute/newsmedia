@@ -1,259 +1,456 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="utf-8">
-    <title>Media & News</title>
-    <link rel="stylesheet" href="style.css">
-    
-		
+  <meta charset="utf-8">
+  <title>Media & News</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Arial;
+  padding: 20px;
+  /*background: #f1f1f1;*/
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 0px;
+  /*font-size: 40px;
+  text-align: center;*/
+  background: white;
+}
+
+h1{
+    background-color:rgb(0,71,48);
+    color: rgb(255,255,255);
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  max-width:100%;
+}
+
+.iframecontainer {
+  position:relative;
+  overflow: hidden;
+  width: 100.0%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 100%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+/*.card {
+   background-color: white;
+   padding: 20px;
+   margin-top: 20px;
+}*/
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding-top:5px;
+  padding-left: 30px;
+  padding-right:30px;
+  padding-bottom:20px;
+  background-color: #f1f1f1;
+  margin-bottom:20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
 </head>
-
 <body>
-  <!--<ul>
-    <li><a href="2020.html">2020</a></li>
-    <li><a href="2019.html">2019</a></li>
-    <li><a class="active" href="2018.html">2018</a></li>
-    <li><a href="2017.html">2017</a></li>
-    <li><a href="2016.html">2016</a></li>
-    <li><a href="2015.html">2015</a></li>
-    <li><a href="2014.html">2014</a></li>
-  
-</ul>-->
-<h1>Robinson Research Institute News & Media</h1>
-  
 
-<h2>2020</h2>
-<ol>
-  <li>
-    <a href="https://www.rnz.co.nz/national/programmes/nights/audio/2018746533/materials-fact-or-fiction-adamantium" target="_blank">Materials: Fact or Fiction - Adamantium with Dr Chris Bumby</a> (14 May, Radio New Zealand)<br/>
-    <iframe src="https://www.rnz.co.nz/audio/remote-player?id=2018746533" width="50%" frameborder="0" height="62px"></iframe>
-  </li>	
+<div class="header">
+  <h1>Robinson Research Institute News & Media</h1>
+</div>
 
-  <li>
-    <a href="https://www.rnz.co.nz/national/programmes/nights/audio/2018739281/materials-fact-of-fiction" target="_blank">Materials: Fact or Fiction - Mithril with Dr Chris Bumby</a> (19 March, Radio New Zealand)<br/>
-    <br/>
-    <iframe src="https://www.rnz.co.nz/audio/remote-player?id=2018739281" width="50%" frameborder="0" height="62px"></iframe>
-  </li>
+<div class="row">
+  <div class="leftcolumn">
+    <h2>2020</h2>
 
-  <li>
-  <a href="https://www.wgtn.ac.nz/engineering/about/news/robinson-research-institutes-hydrogen-steelmaking-research-wins-innovation-award" target="_blank">Robinson Research Institute’s hydrogen-steel making research wins Innovation Award</a>
-  (27 February, Victoria University of Wellington)
-  <br/>
-  <img src="img/BumbyHera2020_25.jpg" alt="InnovatonAward"> 
-  </li>
-  </ol>
-  <hr/>
-  <h2>2019</h2>
-	<ol>	
-    <li>
-    <a href="https://www.wgtn.ac.nz/engineering/about/news/1793032-third-robinson-research-institute-and-kyoto-university-workshop-a-resounding-success" target="_blank">Third Robinson Research Institute and Kyoto University workshop a resounding success</a> (12 December, Victoria University of Wellington)
-    </li>
+    <div class="card">
+      <h2><a href="https://www.rnz.co.nz/national/programmes/nights/audio/2018746533/materials-fact-or-fiction-adamantium" target="_blank">Materials: Fact or Fiction - Adamantium with Dr Chris Bumby</a></h2>
+      <h5>14 May, Radio New Zealand</h5>
+      <iframe src="https://www.rnz.co.nz/audio/remote-player?id=2018746533" width="100%" frameborder="0" height="62px"></iframe>
+      <p>Tonight Dr. Chris Bumby,  Principal Scientist at Victoria University of Wellington’s Robinson Institute; and Associate Investigator at the MacDiarmid Institute gies us his scientific take on Adamantium  - one of several ‘amazing materials’ which have been invented over the years by the authors of Marvel comics.</p>
+    </div>
 
-    <li>
-      <a href="http://www.voxy.co.nz/national/5/353644" target="_blank">New Zealand innovation collab headed for space</a> (2 December, Voxy)
-    </li>
+    <div class="card">
+      <h2>
+          <a href="https://www.rnz.co.nz/national/programmes/nights/audio/2018739281/materials-fact-of-fiction" target="_blank">Materials: Fact or Fiction - Mithril with Dr Chris Bumby</a>
+      </h2>
+      <h5>19 March, Radio New Zealand</h5>
+      <iframe src="https://www.rnz.co.nz/audio/remote-player?id=2018739281" width="100%" frameborder="0" height="62px"></iframe>
+      <p>MacDiarmid Institute Associate Investigator and Senior Scientist at the Robinson Research Institute of Victoria University of Wellington give us his scietific take on Mithril from Lord of the Rings.</p>
+    </div>
 
-    <li>
-      <a href="https://www.opengovasia.com/new-zealand-funds-innovative-space-tech-projects/" target="_blank">New Zealand Funds Innovative Space Tech Projects</a> (12 November, OpenGov Asia)
-    </li>
-
-    <li>
-      <a href="https://www.newsroom.co.nz/@ideasroom/2019/11/07/897985/is-nz-looking-at-a-fusion-future\#" target="_blank">Is NZ looking at a fusion future?</a> (7 November, Newsroom)
-    </li>
-
-    <li>
-      <a href="https://www.scoop.co.nz/stories/ED1911/S00015/public-lecture-explores-role-of-superconductors-in-energy.htm" target="_blank">Public lecture explores role of superconductors in energy</a> (6 November, Scoop)
-    </li>
-
-    <li>
-      <a href="https://www.scoop.co.nz/stories/ED1910/S00021/local-doctoral-student-wins-prized-international-award.htm" target="_blank">Local Doctoral Student Wins Prized International Award </a> (10 October, Scoop)
-    </li>
-
-    <li>
-      <a href="https://sciblogs.co.nz/out-of-space/2019/10/02/google-doodle-for-bill-robinsons-birthday/" target="_blank">Google Doodle for Bill Robinson’s birthday</a> (2 October, Sciblogs)
-    </li>
-
-    <li>
-      <a href="http://www.voxy.co.nz/national/5/347975" target="_blank">Victoria University receives $24m for ground-breaking research</a> (17 September, Voxy)
-    </li>
-
-    <li>
-      <a href="https://www.tvnz.co.nz/one-news/new-zealand/wellington-engineer-creates-solution-power-companies-replacing-concrete-poles?auto=6072972382001" target="_blank">Wellington engineer creates solution for power companies replacing concrete power poles</a> (15 August, TVNZ)
-      <iframe width="560" height="315" src='//players.brightcove.net/963482464001/02nYKqve4_default/index.html?videoId=6072972382001' allowfullscreen frameborder=0></iframe>
-    </li>
-
-    <li>
-      <a href="https://www.newsroom.co.nz/2019/07/19/690152/what-could-a-nz-space-programme-look-like\#" target="_blank">What could a New Zealand space programme look like?</a> (19 July, Newsroom)
-    </li>
-
-    <li>
-      <a href="https://intranet.victoria.ac.nz/staff/news/2019/06/minister-woods-visits-robinson-research-institute-to-announce-funding" target="_blank">Minister Woods visits Robinson Research Institute to announce funding</a> (17 June, Victoria University of Wellington)
-    </li>
-
-    </ol>
+    <div class="card">
+      <h2><a href="https://www.wgtn.ac.nz/engineering/about/news/robinson-research-institutes-hydrogen-steelmaking-research-wins-innovation-award" target="_blank">Robinson Research Institute’s hydrogen-steel making research wins Innovation Award</a></h2>
+      <h5>27 February, Victoria University of Wellington</h5>
+      <img src="img/BumbyHera2020_25.jpg" alt="InnovatonAward"> 
+      <p>Dr Chris Bumby, Principal Scientist, Robinson Research Institute, has received the HERA 2020 Innovation Award, in recognition of his work towards developing a hydrogen-ironmaking process. This novel process has the potential to eliminate carbon dioxide emissions from New Zealand’s steel industry.</p>
+    </div>
     <hr/>
+    <h2>2019</h2>
 
+    <div class="card">
+      <h2><a href="https://www.wgtn.ac.nz/engineering/about/news/1793032-third-robinson-research-institute-and-kyoto-university-workshop-a-resounding-success" target="_blank">Third Robinson Research Institute and Kyoto University workshop a resounding success</a></h2>
+      <h5>12 December, Victoria University of Wellington</h5>
+      <img src="img/kuvuw_small.jpg" alt="KU-VUW Participants">
+      <p>Hosted by Victoria University of Wellington, the workshop attracted almost 40 attendees from Japan, the United States (US) and the University to promote better research connections between VUW researchers and their counterparts at Kyoto University, and with other closely-aligned research organisations in Japan.</p> 
+    </div>
+
+    <div class="card">
+      <h2><a href="http://www.voxy.co.nz/national/5/353644" target="_blank">New Zealand innovation collab headed for space</a></h2>
+      <h5>2 December, Voxy</h5>
+      <p>A research collaboration between Wellington Faculty of Engineering’s Robinson Research Institute and UNSW Canberra Space will accelerate the adoption of novel technology for use in satellites.</p>
+    </div>
+
+    <div class="card">
+      <h2> <a href="https://www.opengovasia.com/new-zealand-funds-innovative-space-tech-projects/" target="_blank">New Zealand Funds Innovative Space Tech Projects</a> </h2>
+      <h5>12 November, OpenGov Asia</h5>
+      <p>Six New Zealand research projects have received NZ$ 500,000 each from the Ministry of Business, Innovation and Employment’s competitive Catalyst: Strategic Space fund.</p>
+    </div>
+
+    <div class="card">
+      <h2> <a href="https://www.newsroom.co.nz/@ideasroom/2019/11/07/897985/is-nz-looking-at-a-fusion-future\#" target="_blank">Is NZ looking at a fusion future?</a> </h2>
+      <h5>7 November, Newsroom</h5>
+      <p>Massachusetts Institute of Technology’s Dr Joseph V Minervini and Victoria University of Wellington's Dr Nick Long take a close look at nuclear fusion and what it might have to do with New Zealand</p>
+    </div>
+
+    <div class="card">
+      <h2> <a href="https://www.scoop.co.nz/stories/ED1911/S00015/public-lecture-explores-role-of-superconductors-in-energy.htm" target="_blank">Public lecture explores role of superconductors in energy</a> </h2>
+      <h5>6 November, Scoop</h5>
+      <p>Victoria University of Wellington will host a lecture by Dr Joseph Minervini, a global expert on superconductivity from Massachusetts Institute of Technology.</p>
+    </div>
+
+    <div class="card">
+      <h2> <a href="https://www.scoop.co.nz/stories/ED1910/S00021/local-doctoral-student-wins-prized-international-award.htm" target="_blank">Local Doctoral Student Wins Prized International Award </a></h2>
+      <h5>10 October, Scoop</h5>
+      <img src="img/brooks.jpg" alt="Justin Brooks"> 
+      <p>Justin Brooks (Gus) was awarded the prestigious Best Poster title out of over 800 posters, presented by leading Scientists at the International Conference on Magnet Technology.</p>
+    </div>
+
+    <div class="card">
+      <h2>  <a href="https://sciblogs.co.nz/out-of-space/2019/10/02/google-doodle-for-bill-robinsons-birthday/" target="_blank">Google Doodle for Bill Robinson’s birthday</a> </h2>
+      <h5>2 October, Sciblogs</h5>
+      <img src="img/googledoodle.jpg" alt="Google Doodle"> 
+      <p>The Google Doodle commemorates the birth in 1938 of Bill Robinson, the kiwi scientist who invented the rubber ‘shock absorbers’ that provide some seismic insulation for large buildings, notably under Te Papa in Wellington. </p>
+    </div>
+
+    <div class="card">
+      <h2>  <a href="http://www.voxy.co.nz/national/5/347975" target="_blank">Victoria University receives $24m for ground-breaking research</a> </h2>
+      <h5>17 September, Voxy</h5>
+      <p>Dr Chris Bumby, a Senior Scientist in the University's Robinson Research Institute, is leading a trans-Tasman multi-institution team that has received nearly $6.5 million for a five-year Research Programme project to develop new chemical processes to eliminate carbon dioxide emissions during the industrial production of critical metals-iron, steel and vanadium.</p>
+    </div>
+
+    <div class="card">
+      <h2>   <a href="https://www.tvnz.co.nz/one-news/new-zealand/wellington-engineer-creates-solution-power-companies-replacing-concrete-poles?auto=6072972382001" target="_blank">Wellington engineer creates solution for power companies replacing concrete power poles</a> 
+      </h2>
+      <h5>15 August, TVNZ</h5>
+      <div class='iframecontainer'>
+      <iframe class='responsive-iframe' src='//players.brightcove.net/963482464001/02nYKqve4_default/index.html?videoId=6072972382001' allowfullscreen frameborder=0></iframe>
+      </div>
+    </div>
+
+    
+
+    <div class="card">
+      <h2><a href="https://www.newsroom.co.nz/2019/07/19/690152/what-could-a-nz-space-programme-look-like\#" target="_blank">What could a New Zealand space programme look like?</a></h2>
+      <h5>19 July, Newsroom</h5>
+      <p>As we mark the fiftieth anniversary of man landing on the moon Dr Nick Long reflects on what that's meant for New Zealand and considers the space 'gold rush' ahead.</p>
+    </div>
+
+    <hr/>
     <h2>2018</h2>
 
-    <ol>
-      <li>
-        <a href="https://www.nzherald.co.nz/nz/news/article.cfm?c_id=1&objectid=12169883" target="_blank">Young NZ scientist's pioneering helmet-style brain scanner paves way for next-level MRI imaging</a> (2 December, New Zealand Herald)
-      </li>
+    <div class="card">
+      <h2><a href="https://www.nzherald.co.nz/nz/news/article.cfm?c_id=1&objectid=12169883" target="_blank">Young NZ scientist's pioneering helmet-style brain scanner paves way for next-level MRI imaging</a> </h2>
+      <h5>2 December, New Zealand Herald</h5>
+      <img src="img/helmetmri.jpg" alt="Ben and Kostantinos"> 
+      <p>Technology being developed by a Kiwi researcher could pave the way toward brain-scanning systems able to be worn on our heads.</p>
+    </div>
 
-      <li>
-        <a href="https://kiwinet.org.nz/News/Turning_brain_scanning_on_its_head_with_smaller_MRIs" target="_blank">Turning brain scanning on its head with smaller MRIs</a> (29 November, Kiwinet)
-      </li>
+    <div class="card">
+      <h2><a href="https://kiwinet.org.nz/News/Turning_brain_scanning_on_its_head_with_smaller_MRIs" target="_blank">Turning brain scanning on its head with smaller MRIs</a></h2>
+      <h5>29 November, Kiwinet</h5>
+      <p>Wellington researcher Ben Parkinson has received a boost from KiwiNet to help commercialise his game-changing compact superconducting magnets for smaller, next-generation, magnetic resonance imaging (MRI) systems.</p>
+    </div>
 
-      <li>
-        <a href="https://www.radionz.co.nz/news/national/367044/planes-trains-and-super-conducting-magnets" target="_blank">Planes, trains and superconducting magnets</a> (22 September, Radio New Zealand)
-      </li>
+    <div class="card">
+      <h2><a href="https://www.radionz.co.nz/news/national/367044/planes-trains-and-super-conducting-magnets" target="_blank">Planes, trains and superconducting magnets</a></h2>
+      <h5>22 September, Radio New Zealand</h5>
+      <img src="img/fluxpump.jpg" alt="Flux Pump Stator"> 
+      <p>New Zealand scientists are creating a device which could help power aeroplanes using super-conducting magnets.</p>
+    </div>
 
-      <li>
-        <a href="https://www.youtube.com/watch?v=xbmde_onM8Y" target="_blank">2018 KiwiNet Awards Finalist -- Victoria University’s Multi-party Chinese Partnership</a> (5 July, YouTube)
-        <br/>
-	      <iframe width="560" height="315" src="https://www.youtube.com/embed/xbmde_onM8Y">
-        </iframe>
-      </li>
-
-    </ol>
+    <div class="card">
+      <h2><a href="https://www.youtube.com/watch?v=xbmde_onM8Y" target="_blank">2018 KiwiNet Awards Finalist -- Victoria University’s Multi-party Chinese Partnership</a>
+        </h2>
+      <h5>5 July, YouTube</h5>
+      <div class='iframecontainer'>
+      <iframe class='responsive-iframe' src="https://www.youtube.com/embed/xbmde_onM8Y">
+      </iframe>
+      </div>
+      <p>New Zealand scientists are creating a device which could help power aeroplanes using super-conducting magnets.</p>
+    </div>
 
     <hr/>
-
     <h2>2017</h2>
+    <div class="card">
+      <h2><a href="https://www.youtube.com/watch?v=mTqHWHgyD0s" target="_blank">Reduce aviation emissions by 70% - here's how. Rod Badcock TEDxChristchurch</a> 
+        </h2>
+      <h5>13 December, YouTube</h5>
+      <div class="iframecontainer">
+        <iframe class="responsive-iframe" src="https://www.youtube.com/embed/mTqHWHgyD0s">
+        </iframe>  
+      </div>
+    </div>
 
-    <ol>
-      <li>
-        <a href="https://www.youtube.com/watch?v=mTqHWHgyD0s" target="_blank">Reduce aviation emissions by 70% - here's how. Rod Badcock TEDxChristchurch</a> (13 December, YouTube)
-        <br/>
-	      <iframe width="560" height="315" src="https://www.youtube.com/embed/mTqHWHgyD0s">
-        </iframe>
-      </li>
+    <div class="card">
+      <h2><a href="http://www.newstalkzb.co.nz/news/education/funding-boost-for-universitys-hybrid-jet-engine/" target="_blank">Funding boost for university's hybrid jet engine</a> </h2>
+      <h5>14 September, Newstalk ZB</h5>
+      <p>A world changing hybrid-electric jet engine motor could be the result of the latest round of Government funding for science projects.
+        As part of this year's investment found, 29 million dollars from MBIE has been awarded to Victoria University projects, including six point three million for the jet plane project.</p>
+    </div>
 
-      <li>
-        <a href="http://www.newstalkzb.co.nz/news/education/funding-boost-for-universitys-hybrid-jet-engine/" target="_blank">Funding boost for university's hybrid jet engine</a> (14 September, Newstalk ZB)
-      </li>
+    <div class="card">
+      <h2><a href="https://www.victoria.ac.nz/news/2017/09/new-$29-million-funding-fuels-hybrid-electric-jet-engine-and-other-research-projects" target="_blank">New $29 million funding fuels hybrid-electric jet engine and other research projects</a> </h2>
+      <h5>13 September, Victoria University of Wellington</h5>
+      <p>Development of technology to help build the world's first hybrid-electric passenger jet plane is among Victoria University of Wellington projects to receive nearly $29 million in the Ministry of Business, Innovation and Employment's 2017 Endeavour Fund.</p>
+    </div>
 
-      <li>
-        <a href="https://www.victoria.ac.nz/news/2017/09/new-$29-million-funding-fuels-hybrid-electric-jet-engine-and-other-research-projects" target="_blank">New $29 million funding fuels hybrid-electric jet engine and other research projects</a> (13 September, Victoria University of Wellington)
-      </li>
+    <div class="card">
+      <h2><a href="http://www.radionz.co.nz/national/programmes/ninetonoon/galleries/the-race-to-get-hybrid-electric-jet-planes-off-the-ground" target="_blank">The race to get hybrid-electric jet planes off the ground (slideshow)</a></h2>
+      <h5>10 July, Radio New Zealand</h5>
+      <p>A team of Wellington scientists is hoping to use their technology to help build the world's first hybrid-electric jet plane.</p>
+    </div>
 
-      <li>
-        <a href="http://www.radionz.co.nz/national/programmes/ninetonoon/galleries/the-race-to-get-hybrid-electric-jet-planes-off-the-ground" target="_blank">The race to get hybrid-electric jet planes off the ground (slideshow)</a> (10 July, Radio New Zealand)
-      </li>
+    <div class="card">
+      <h2><a href="http://www.radionz.co.nz/national/programmes/ninetonoon/audio/201850490/the-race-to-get-hybrid-electric-jet-planes-off-the-ground" target="_blank">The race to get hybrid-electric jet planes off the ground</a></h2>
+      <h5>10 July, Radio New Zealand</h5>
+      <iframe src="https://www.rnz.co.nz/audio/remote-player?id=201850490" width="100%" frameborder="0" height="62px"></iframe>
+    </div>
 
-      <li>
-        <a href="http://www.radionz.co.nz/national/programmes/ninetonoon/audio/201850490/the-race-to-get-hybrid-electric-jet-planes-off-the-ground" target="_blank">The race to get hybrid-electric jet planes off the ground</a> (10 July, Radio New Zealand)
-        <br/>
-        <iframe src="https://www.rnz.co.nz/audio/remote-player?id=201850490" width="50%" frameborder="0" height="62px"></iframe>
-      </li>
+    <div class="card">
+      <h2><a href="http://www.viclink.co.nz/news/investing-in-our-innovators/" target="_blank">Investing in our innovators</a> </h2>
+      <h5>27 June, Viclink</h5>
+      <p>Further cementing Victoria University of Wellington’s reputation for innovation, three of its researchers were recently awarded $25,000 each from KiwiNet’s Emerging Innovator Fund.</p>
+    </div>
 
-      <li>
-        <a href="http://www.viclink.co.nz/news/investing-in-our-innovators/" target="_blank">Investing in our innovators</a> (27 June, Viclink)
-      </li>
+    <div class="card">
+      <h2><a href="https://www.victoria.ac.nz/news/2017/06/wellington-scientists-getting-hybrid-planes-off-the-ground" target="_blank">Wellington scientists getting hybrid planes off the ground</a> </h2>
+      <h5>26 June, Victoria University of Wellington</h5>
+      <p>A team of Victoria University of Wellington researchers is hoping to use their technology to help build the world's first hybrid-electric jet plane.</p>
+    </div>
 
-      <li>
-        <a href="https://www.victoria.ac.nz/news/2017/06/wellington-scientists-getting-hybrid-planes-off-the-ground" target="_blank">Wellington scientists getting hybrid planes off the ground</a> (26 June, Victoria University of Wellington)
-      </li>
+    <div class="card">
+      <h2><a href="https://www.victoria.ac.nz/news/victorious/2017/autumn-2017/favour-in-china" target="_blank">Finding favour in China</a></h2>
+      <h5>Victorius Autumn</h5>
+      <img src="img/chinaphds.jpg" alt="Chinese PhD students"> 
+      <p>A memorandum of understanding with Beijing Jiaotong University is already reaping rewards for Victoria, including access to some of the highest echelons of the Chinese Government.</p>
+    </div>
 
-      <li>
-        <a href="https://www.victoria.ac.nz/news/victorious/2017/autumn-2017/favour-in-china" target="_blank">Finding favour in China</a> (Victorius)
-      </li>
+    <div class="card">
+      <h2><a href="http://www.victoria.ac.nz/science/about/news/victoria-strengthens-research-and-innovation-ties-with-china" target="_blank">Victoria strengthens research and innovation ties with China</a> </h2>
+      <h5>10 April, Victoria University of Wellington</h5>
+      <p>A Memorandum of Understanding has been signed between Victoria University of Wellington and the Chinese Academy of Sciences, which represents a large group of research, tertiary and supporting institutes in China.</p>
+    </div>
+    
+    <hr/>
+    <h2>2016</h2>
+    <div class="card">
+      <h2><a href="http://www.victoria.ac.nz/science/about/news/news-archives/2016-news/new-robinson-research-institute-director" target="_blank">New Robinson Research Institute director</a> </h2>
+      <h5>13 December, Victoria University of Wellington</h5>
+      <p>Associate Professor Nick Long has been appointed as the new director of Victoria University’s Robinson Research Institute.</p>
+    </div>
 
-      <li>
-        <a href="http://www.victoria.ac.nz/science/about/news/victoria-strengthens-research-and-innovation-ties-with-china" target="_blank">Victoria strengthens research and innovation ties with China</a> (10 April, Victoria University of Wellington)
-      </li>
-    </ol>
-      <hr/>
+    <div class="card">
+      <h2><a href="http://www.victoria.ac.nz/science/about/news/news-archives/2016-news/victoria-research-flourishes-in-marsden-funding" target="_blank">Victoria research flourishes in Marsden funding</a></h2>
+      <h5> 3 November, Victoria University of Wellington</h5>
+      <p>Victoria University of Wellington researchers have received 26 prestigious Marsden Fund grants worth $14.3 million, the largest number ever received by the University and more than 22 percent of the total funding awarded in 2016.</p>
+    </div>
 
-      <h2>2016</h2>
-    <ol>
-      <li>
-        <a href="http://www.victoria.ac.nz/science/about/news/news-archives/2016-news/new-robinson-research-institute-director" target="_blank">New Robinson Research Institute director</a> (13 December, Victoria University of Wellington)
-      </li>
+    <div class="card">
+      <h2><a href="https://www.victoria.ac.nz/news/2016/09/victoria-researchers-win-multi-million-dollar-funding" target="_blank">Victoria researchers win multi-million-dollar funding</a></h2>
+      <h5>15 September, Victoria University of Wellington</h5>
+      <p>Dr Mike Staines, Senior Scientist with the Robinson Research Institute, is leading a project that includes researchers from Callaghan Innovation and will receive $1 million over three years to develop technology that would slash the cost of manufacturing sensors for ultrasound imaging while at the same time improving performance through enhanced image quality. </p>
+    </div>
 
-      <li>
-        <a href="http://www.victoria.ac.nz/science/about/news/news-archives/2016-news/victoria-research-flourishes-in-marsden-funding" target="_blank">Victoria research flourishes in Marsden funding</a> (3 November, Victoria University of Wellington)
-      </li>
+    <div class="card">
+      <h2><a href="https://www.victoria.ac.nz/news/2016/09/national-science-challenge-seed-funding-to-explore-innovative-early-cancer-detection" target="_blank">National Science Challenge seed funding to explore innovative early cancer detection</a> </h2>
+      <h5>2 September, Victoria University of Wellington</h5>
+      <p>Victoria University of Wellington researchers have received $255,000 in seed funding to develop new magnetic resonance imaging (MRI) contrast agents for early detection of cancer and other diseases.</p>
+    </div>
 
-      <li>
-        <a href="https://www.victoria.ac.nz/news/2016/09/victoria-researchers-win-multi-million-dollar-funding" target="_blank">Victoria researchers win multi-million-dollar funding</a> (15 September, Victoria University of Wellington)
-      </li>
+    <div class="card">
+      <h2><a href="https://www.victoria.ac.nz/news/victorious/2016/spring-2016/beijing" target="_blank">On track to slash Beijing subway energy use</a></h2>
+      <h5>Victorius Spring</h5>
+      <p>The heavy energy use of Beijing’s subway system could be nearly halved, thanks to high-temperature superconducting technology.</p>
+    </div>
 
-      <li>
-        <a href="https://www.victoria.ac.nz/news/2016/09/national-science-challenge-seed-funding-to-explore-innovative-early-cancer-detection" target="_blank">National Science Challenge seed funding to explore innovative early cancer detection</a> (2 September, Victoria University of Wellington)
-      </li>
+    <div class="card">
+      <h2><a href="https://www.wgtn.ac.nz/research/strengths/research-focus/advanced-materials/subway-energy-use" target="_blank">Lucrative tech deal to slash Beijing subway energy use</a></h2>
+      <h5>Victoria University of Wellington</h5>
+      <p>Research from Victoria University of Wellington’s Robinson Research Institute as part of a new multi-million-dollar joint venture deal will underpin ground-breaking technology that could see the heavy energy use of Beijing’s subway system cut by forty percent.</p>
+    </div>
 
-      <li>
-        <a href="https://www.victoria.ac.nz/news/victorious/2016/spring-2016/beijing" target="_blank">On track to slash Beijing subway energy use</a> (Victorius)
-      </li>
-
-      <li>
-        <a href="https://www.wgtn.ac.nz/research/strengths/research-focus/advanced-materials/subway-energy-use" target="_blank">Lucrative tech deal to slash Beijing subway energy use</a>( Victoria University of Wellington)
-      </li>
-
-    </ol>
 
     <hr/>
     
     <h2>2015</h2>
 
-    <ol>
-      <li>
-        <a href="https://www.victoria.ac.nz/news/2015/09/research-funding-success-for-victoria-university" target="_blank">Research funding success for Victoria University</a> (3 September, Victoria University of Wellington)
-      </li>
+    <div class="card">
+      <h2><a href="https://www.victoria.ac.nz/news/2015/09/research-funding-success-for-victoria-university" target="_blank">Research funding success for Victoria University</a></h2>
+      <h5>3 September, Victoria University of Wellington</h5>
+      <p>Victoria University scientists will be progressing cutting-edge research in high-value areas after winning significant funding in the 2015 Ministry of Business, Innovation and Employment funding round.</p>
+    </div>
 
-      <li>
-        <a href="http://www.radionz.co.nz/national/programmes/ourchangingworld/audio/201755897/a-transportable-mri" target="_blank">A transportable MRI</a> (28 May, Radio New Zealand)
-        <br/>
-        <iframe src="https://www.rnz.co.nz/audio/remote-player?id=201755897" width="50%" frameborder="0" height="62px"></iframe>
-      </li>
+    <div class="card">
+      <h2><a href="http://www.radionz.co.nz/national/programmes/ourchangingworld/audio/201755897/a-transportable-mri" target="_blank">A transportable MRI</a></h2>
+      <h5>28 May, Radio New Zealand</h5>
+      <iframe src="https://www.rnz.co.nz/audio/remote-player?id=201755897" width="100%" frameborder="0" height="62px"></iframe>
+      <p>A pop-up MRI or magnetic resonance imaging machine that could be transported in a shipping container has been designed by the Robinson Research Institute.</p>
+    </div>
 
-      <li>
-        <a href="http://www.victoria.ac.nz/science/about/news/news-archives/2015-news/transforming-power-transmission-worldwide" target="_blank">Transforming power transmission worldwide</a> (20 May, Victoria University of Wellington)
-      </li>
 
-      <li>
-        <a href="https://www.wgtn.ac.nz/news/2015/04/victoria-designs-transportable-mri-machine" target="_blank">Victoria designs transportable MRI machine</a> (22 April, Victoria University of Wellington)
-      </li>
+    <div class="card">
+      <h2><a href="http://www.victoria.ac.nz/science/about/news/news-archives/2015-news/transforming-power-transmission-worldwide" target="_blank">Transforming power transmission worldwide</a></h2>
+      <h5>20 May, Victoria University of Wellington</h5>
+      <p>An collaboration led by Victoria University scientists shows high temperature superconducting (HTS) power transformers can significantly reduce energy loss.</p>
+    </div>
 
-      <li>
-        <a href="http://www.radionz.co.nz/national/programmes/ourchangingworld/audio/20168483/using-a-scanning-electron-microscope" target="_blank">Using a Scanning Electron Microscope</a> (26 February, Radio New Zealand) 
-        <br/>
-        <iframe src="https://www.rnz.co.nz/audio/remote-player?id=20168483" width="50%" frameborder="0" height="62px"></iframe>
-      </li>
+    <div class="card">
+      <h2><a href="https://www.wgtn.ac.nz/news/2015/04/victoria-designs-transportable-mri-machine" target="_blank">Victoria designs transportable MRI machine</a> </h2>
+      <h5>22 April, Victoria University of Wellington</h5>
+      <p>Named the ‘MRI Ambulance’, the design places a Magnetic Resonance Imaging (MRI) scanner within a refrigerated shipping container which can be transported on the back of a flatbed truck. </p>
+    </div>
 
-    </ol>
+    <div class="card">
+      <h2><a href="http://www.radionz.co.nz/national/programmes/ourchangingworld/audio/20168483/using-a-scanning-electron-microscope" target="_blank">Using a Scanning Electron Microscope</a> </h2>
+      <h5>26 February, Radio New Zealand</h5>
+      <iframe src="https://www.rnz.co.nz/audio/remote-player?id=20168483" width="100%" frameborder="0" height="62px"></iframe>
+      <p>Materials engineer Dr Ruth Knibbe uses a scanning electron microscope (SEM) to image her own samples and samples for other scientists. Unlike a light microscope, an SEM uses a focused beam of electrons to produce images from the top surface of a sample. </p>
+    </div>
 
     <hr/>
 
     <h2>2014</h2>
 
-    <ol>
-      <li>
-        <a href="https://www.victoria.ac.nz/news/2014/marsden-funding-success-for-victoria-researchers" target="_blank">Marsden funding success for Victoria researchers</a> (4 November, Victoria University of Wellington)
-      </li>
+    <div class="card">
+      <h2><a href="https://www.victoria.ac.nz/news/2014/marsden-funding-success-for-victoria-researchers" target="_blank">Marsden funding success for Victoria researchers</a></h2>
+      <h5>4 November, Victoria University of Wellington</h5>
+      <p>Victoria University of Wellington researchers have received 25 prestigious Marsden Fund grants worth $12.1 million, the largest number ever received by the University.</p>
+    </div>
 
-      <li>
-        <a href="https://www.victoria.ac.nz/news/2014/deal-with-us-company-opens-doors-for-robinson-research-institute" target="_blank">Deal with US company opens doors for Robinson Research Institute</a> (7 October, Victoria University of Wellington)
-      </li>
+    <div class="card">
+      <h2><a href="https://www.victoria.ac.nz/news/2014/deal-with-us-company-opens-doors-for-robinson-research-institute" target="_blank">Deal with US company opens doors for Robinson Research Institute</a> </h2>
+      <h5>7 October, Victoria University of Wellington</h5>
+      <p>The Robinson Research Institute has signed a strategic partnership agreement with NASDAQ-listed Superconductor Technologies Inc. (STI) which will see the Institute’s innovative technology used for new applications in the energy and health industries.</p>
+    </div>
 
-      <li>
-        <a href="https://www.victoria.ac.nz/news/2014/partnering-opens-doors" target="_blank">Partnering opens doors</a> (11 September, Victoria University of Wellington)
-      </li>
-    </ol>
+    <div class="card">
+      <h2><a href="https://www.victoria.ac.nz/news/2014/partnering-opens-doors" target="_blank">Partnering opens doors</a></h2>
+      <h5>11 September, Victoria University of Wellington</h5>
+      <p>The Robinson Research Institute’s close relationships with business partners exemplify the entrepreneurial approach being taken at Victoria University.</p>
+    </div>
+
     <hr/>
     <h2>2013</h2>
-    <ol>
-      <li>
-        <a href="https://www.victoria.ac.nz/news/2013/callaghan-innovation-research-teams-to-transfer-to-victoria-university" target="_blank">Callaghan Innovation research teams to transfer to Victoria University</a> (20 December, Victoria University of Wellington)
-      </li>
+    <div class="card">
+      <h2><a href="https://www.victoria.ac.nz/news/2013/callaghan-innovation-research-teams-to-transfer-to-victoria-university" target="_blank">Callaghan Innovation research teams to transfer to Victoria University</a></h2>
+      <h5>20 December, Victoria University of Wellington</h5>
+      <p>Two Callaghan Innovation research teams will join Victoria University of Wellington early in the new year under a transfer agreement between the two organisations.</p>
+    </div>
 
-    </ol>
-
-    <hr/>
-
-  <div class="credit texts">Compiled by James Storey </div>	
-  
-</body>	
-
+  </div>
+  <!--
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <div class="fakeimg" style="height:100px;">Image</div>
+      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+    </div>
+    <div class="card">
+      <h3>Popular Post</h3>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div><br>
+      <div class="fakeimg">Image</div>
+    </div>
+    <div class="card">
+      <h3>Follow Me</h3>
+      <p>Some text..</p>
+    </div>
+  </div>
+-->
+</div>
+<!--
+<div class="footer">
+  <h2>Footer</h2>
+</div>
+-->
+</body>
 </html>
