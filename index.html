@@ -48,6 +48,13 @@ img{
   padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 }
 
+.audioiframecontainer {
+  position:relative;
+  overflow: hidden;
+  width: 100.0%;
+  height:62px;
+}
+
 /* Then style the iframe to fit in the container div with full height and width */
 .responsive-iframe {
   position: absolute;
@@ -94,10 +101,10 @@ img{
   padding-right:30px;
   padding-bottom:20px;
   background-color: #f1f1f1;
+  margin-bottom:20px;
   max-width:800px;
   margin-left:auto;
   margin-right:auto;
-  margin-bottom:20px;
 }
 
 /* Clear floats after the columns */
@@ -218,7 +225,9 @@ ul {
       <h2><a href="https://www.rnz.co.nz/news/national/420668/new-head-scanning-machine-designed-to-reduce-anxiety" target="_blank">New head scanning machine designed to reduce anxiety</a></h2>
       <h5>7 July, Radio New Zealand</h5>
       <p>Head scans in Magnetic Resonance Imaging, or MRI machines, should become more comfortable thanks to work being done by Wellington researchers.</p>
-      <iframe src="https://www.rnz.co.nz/audio/remote-player?id=2018753835" width="100%" frameborder="0" max-height="62px"></iframe>
+      <div class="audioiframecontainer">
+      <iframe class="responsive-iframe" src="https://www.rnz.co.nz/audio/remote-player?id=2018753835" width="100%" frameborder="0" height="auto"></iframe>
+      </div>
       <p>Wellington researchers looking into making MRI more comfortable.</p>
     </div>
 
