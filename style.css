@@ -1,55 +1,201 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-
-
+* {
+    box-sizing: border-box;
+  }
   
-li {
-  padding:20px;
-}
+  body{
+    font-family:  'Roboto','Source Sans Pro','Open Sans','Lato',Helvetica, Arial, sans-serif;
+    /*font-size:100%;*/
+  }
+  
 
-a{
-    text-decoration: none;
-}
-
-iframe{
-    margin-top:20px;
-}
-
-img{
-    margin-top: 20px;
-    margin-left: 20%;
-}
-
-h1{
-    background-color:rgb(0,71,48);
-    color: rgb(255,255,255);
-    padding: 20px;
-}
-
-.csl-entry{
-
-    padding:10px;
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+    box-shadow:  0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    }
     
-}
+    /* Style the links inside the navigation bar */
+    .topnav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0.9rem 1rem;
+    text-decoration: none;
+    }
+    
+    /* Change the color of links on hover */
+    .topnav a:hover:not(.active) {
+    background-color: #111;
+    }
+    
+    /* Style the "active" element to highlight the current page */
+    .topnav a.active {
+    background-color: rgb(0,71,48);
+    color: white;
+    }
+    
 
-.csl-left-margin{
-    float:left;
-    margin-right:20px;
-    font-weight:bold;
-}
-
-.csl-right-inline{
-    margin-left: 40px;
-}
-
-.doi{
-    margin-left:40px;
-}
-
-.credit {
-    color: #9E9E9E;
-    font-size: 10px;
-    margin-bottom: 10px;
-}
+    h1{
+        background-color:rgb(0,71,48);
+        color: rgb(255,255,255);
+        padding: 1.25rem;
+        /*font: 400 15px/1.8 sans-serif;*/
+        font: 400 0.9rem/1.8 sans-serif;
+        font-size:1.9rem;
+        letter-spacing: 0;
+      }
+  
+    
+    h2{
+    padding-left:20px;
+  }
+  
+  a{
+      text-decoration: none;
+  }
+  
+  img{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    max-width:100%;
+  }
+  
+  .iframecontainer {
+    position:relative;
+    overflow: hidden;
+    width: 100.0%;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  }
+  
+  .audioiframecontainer {
+    position:relative;
+    overflow: hidden;
+    width: 100.0%;
+    height:3.8rem;
+  }
+  
+  /* Then style the iframe to fit in the container div with full height and width */
+  .responsive-iframe {
+    /*position:relative;
+    width: 100%;*/
+    border:none;
+    overflow:hidden;
+    display:block;
+    margin:auto;
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {   
+    float: left;
+    width: 100%;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 1.25rem;
+  }
+  
+  /* Fake image */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 1.25rem;
+  }
+  
+ 
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding-top:0.3rem;
+    padding-left: 1.9rem;
+    padding-right:1.9rem;
+    padding-bottom:1.25rem;
+    background-color: #f1f1f1;
+    margin-bottom:1.25rem;
+    max-width:90ch;
+    margin-left:auto;
+    margin-right:auto;
+  }
+    
+  .card p{
+    line-height:1.5;
+  }
+    
+  .card h2{
+    padding-left:0;
+  }  
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 1.25rem;
+    text-align: center;
+    background: #ddd;
+    margin-top: 1.25rem;
+  }
+  
+  .credit {
+      color: #9E9E9E;
+      font-size: 0.6rem;
+      margin-bottom: 0.6rem;
+  }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .leftcolumn, .rightcolumn {   
+      width: 100%;
+      padding: 0;
+    }
+  }
+  
+  
+  
+   
+  
+    #myBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 1.25rem; /* Place the button at the bottom of the page */
+    right: 1.9rem; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color:rgb(0,71,48); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 0.9rem; /* Some padding */
+    border-radius: 0.6rem; /* Rounded corners */
+    font-size: 1.125rem; /* Increase font size */
+  }
+    
+    #nextBtn {
+    bottom: 1.25rem; /* Place the button at the bottom of the page */
+    position: relative;
+    margin-top: 1.25rem;
+    left: 50%; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color:rgb(0,71,48); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 0.9rem; /* Some padding */
+    border-radius: 0.6rem; /* Rounded corners */
+    font-size: 1.125rem; /* Increase font size */
+  }
+  
+  
+  #myBtn:hover {
+    background-color: #333; /* Add a dark-grey background on hover */
+  }
