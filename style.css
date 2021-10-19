@@ -65,6 +65,10 @@
   a:hover{
       background-color:rgb(0, 119, 81);
   }
+
+  p a{
+      color:rgb(0,71,48);
+}
   
   img{
     display:block;
