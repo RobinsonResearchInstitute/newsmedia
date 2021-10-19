@@ -70,7 +70,9 @@
       color:rgb(0,71,48);
 }
 
-p a:hover{}
+p a:hover{
+    background-color:white;
+}
   
   img{
     display:block;
