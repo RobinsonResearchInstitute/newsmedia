@@ -69,6 +69,8 @@
   p a{
       color:rgb(0,71,48);
 }
+
+p a:hover{}
   
   img{
     display:block;
