@@ -261,3 +261,11 @@ p a:hover{
   #myBtn:hover {
     background-color: #333; /* Add a dark-grey background on hover */
   }
+
+#myVideo{
+ display:block;
+  margin-left:auto;
+  margin-right:auto;
+  width:90%;
+  height:auto;
+}
