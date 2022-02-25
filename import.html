@@ -8,10 +8,14 @@
     <title></title> 
     <script src="//code.jquery.com/jquery-1.10.2.js"></script> 
     <script>  
+    
     $(function(){ 
-      $("#header").load("navbar.html");  
-      //$("#footer").load("footer.html");  
-    }); 
+      $("#header").load("navbar.html",function() {
+            document.getElementById("2021").className="active";
+        });  
+    });
+    
+    
     </script>
     
     <style>
@@ -24,8 +28,12 @@
 
     </head> 
     <body> 
-    <div id="header"></div> 
+    <div id="header">
+        
+    </div> 
     <!--Remaining section--> 
-    <div id="footer"></div> 
-    </body> 
+    <div id="footer">
+        <a id="test" href="">test link</a>
+    </div> 
+    </body>
     </html> 
