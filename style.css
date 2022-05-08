@@ -131,6 +131,14 @@ p a:hover{
     position:absolute;
 }
 
+.centerdiv{
+  
+  /*margin:auto;
+  width:80%;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
   
   /* Create two unequal columns that floats next to each other */
   /* Left column */
