@@ -431,6 +431,19 @@ input:checked+.slider:before {
   color: rgb(0, 195, 255);
 }
 
+.copybutton{
+  font-size:1rem;
+  display:block;
+  margin-right:0;
+  margin-left:auto;
+  color:#333;
+}
+
+.copybutton::after{
+  font-family:'FontAwesome';
+  font-weight:400;
+  content:' \f0c1';
+}
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
 
