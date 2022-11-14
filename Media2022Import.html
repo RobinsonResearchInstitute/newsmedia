@@ -2,6 +2,28 @@
 <html>
 
 <head>
+  
+  <meta property="og:title" content="Robinson News & Media" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://robinson.ac.nz/newsmedia/" />
+    <meta property="og:site_name" content="Robinson Research Institute"/>
+    <meta property="og:image" content="https://robinson.ac.nz/newsmedia/screenshot.jpg" />
+    <meta property="og:description" content="View the Institute's news and media stories." />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="robinson.ac.nz" />    
+    <meta name="twitter:title" content="Robinson News & Media" />
+    <meta name="twitter:description" content="View the Institute's news and media stories." />  
+    <meta name="twitter:image" content="https://robinson.ac.nz/newsmedia/screenshot.jpg" />
+    
+    
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="site.webmanifest">
+  
+  
   <meta charset="utf-8">
   <title>Media & News</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +32,7 @@
 
   <link rel="stylesheet" href="slideshow.css">
   <link rel="stylesheet" href="style3.css">
-
+  <script src="slideshow3.js"></script>
   
 
 </head>
@@ -77,9 +99,11 @@
         });
         history.pushState('', document.title, url);
         includeHTML(document.getElementById(element.innerHTML), 'media_' + element.innerHTML + '.html');
+        console.log("Reload");
       }
 
       window.addEventListener('popstate', function (e) {
+        console.log("popstate");
         const urlParams = new URLSearchParams(window.location.search);
         if (urlParams.has('year')) {
           includeHTML(document.getElementById(urlParams.get('year')), 'media_' + urlParams.get('year') + '.html');
@@ -103,16 +127,29 @@
         if (file) {
           /*make an HTTP request using the attribute value as the file name:*/
           xhttp = new XMLHttpRequest();
+          
           xhttp.onreadystatechange = function () {
             if (this.readyState == 4) {
               if (this.status == 200) {
+
                 z.innerHTML = this.responseText;
 
                 //showSlides(1);
                 //showSlides(1, 0);
                 //showSlides(1, 1);
+                //console.log(this.responseText);
+                let cards = document.getElementsByClassName("card");
+                
+                //console.log(cards);
+                
+                for(let c = 0; c<cards.length; c++){
+                  if(cards[c].children[0].tagName=="A")
+                    cards[c].innerHTML+="<button title='Copy link' class='copybutton'></button>";
+                }
+                
                 initSlides();
-
+                linkButtons();
+                
               }
               if (this.status == 404) { z.innerHTML = "Page not found."; }
 
@@ -129,8 +166,10 @@
       const queryString = window.location.search;
       const urlParams = new URLSearchParams(queryString);
       if (urlParams.has('year')) {
+        console.log("year");
         includeHTML(document.getElementById(urlParams.get('year')), 'media_' + urlParams.get('year') + '.html');
       } else {
+        console.log("active");
         const active = document.getElementsByClassName('active')[0].innerHTML;
         const url = new URL(window.location);
 
@@ -168,8 +207,9 @@
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
       }
 
-
+      function linkButtons(){
       const buttons = document.getElementsByClassName('copybutton')
+      //console.log(buttons);
       for (let i = 0; i < buttons.length; i++) {
         buttons[i].onclick = (e) => {
           //console.log(e.target.parentNode.parentNode);
@@ -179,9 +219,11 @@
           //console.log(anchor);
           console.log(address + "#" + anchor);
           navigator.clipboard.writeText(address + "#" + anchor);
+          //alert("The following link has been copied to the clipboard\n\n"+address + "#" + anchor);
           // console.log(e.target.parentNode.getElementsByTagName("A")[0].id);
         }
       }
+    }
 
       /*
       function copyLink(e){
@@ -286,7 +328,7 @@
 
 
     </script>
-    <script src="slideshow3.js" defer></script>
+    
 </body>
 
 </html>
