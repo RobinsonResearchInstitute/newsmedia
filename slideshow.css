@@ -72,8 +72,12 @@
   transition: background-color 0.6s ease;
 }
 
-.active, .dot:hover {
+.dot:hover {
   background-color: #717171;
+}
+
+.active {
+  background-color: rgb(0, 71, 48);
 }
 
 /* Fading animation */
