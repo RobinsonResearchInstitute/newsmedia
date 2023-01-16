@@ -158,7 +158,7 @@ p a:hover{
   background-color:white;
 }
 
-img{
+.card img{
   display:block;
   margin-left:auto;
   margin-right:auto;
