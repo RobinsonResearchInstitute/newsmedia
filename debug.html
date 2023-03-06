@@ -194,8 +194,8 @@
           }
           xhttp.open("GET", file, true);
           xhttp.send();
-          console.log(location.hash);
-          document.getElementById(location.hash).scrollIntoView();
+          console.log(location.hash.substring(1));
+          document.getElementById(location.hash.substring(1)).scrollIntoView();
           /*exit the function:*/
           return;
 
