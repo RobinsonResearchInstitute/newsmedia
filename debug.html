@@ -180,9 +180,7 @@
                 linkButtons();
                 readMoreButtons();
                 console.log(location.hash);
-                 if (location.hash) {
-                  let target = location.hash;
-                  window.scrollTop = document.querySelector(target).offsetTop;
+                 if (location.hash) location.href = location.hash;
               }
                 
               }
