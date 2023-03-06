@@ -33,7 +33,11 @@
   <link rel="stylesheet" href="slideshow.css">
   <link rel="stylesheet" href="style3.css">
   <script src="slideshow3.js"></script>
-  
+  <script type="text/javascript">
+    window.addEventListener('load', function() {
+       if (location.hash) location.href = location.hash;
+    });
+</script>
 
 </head>
 
@@ -180,7 +184,7 @@
                 linkButtons();
                 readMoreButtons();
                 console.log(location.hash);
-                if (location.hash) location.href = location.hash;
+                /*if (location.hash) location.href = location.hash;*/
               
                 
               }
