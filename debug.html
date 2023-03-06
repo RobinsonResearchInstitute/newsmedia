@@ -33,11 +33,11 @@
   <link rel="stylesheet" href="slideshow.css">
   <link rel="stylesheet" href="style3.css">
   <script src="slideshow3.js"></script>
-  <script type="text/javascript">
+  <!--<script type="text/javascript">
     window.addEventListener('load', function() {
        if (location.hash) location.href = location.hash;
     });
-</script>
+</script>-->
 
 </head>
 
@@ -183,7 +183,7 @@
                 initSlides();
                 linkButtons();
                 readMoreButtons();
-                console.log(location.hash);
+                
                 /*if (location.hash) location.href = location.hash;*/
               
                 
@@ -194,6 +194,8 @@
           }
           xhttp.open("GET", file, true);
           xhttp.send();
+          console.log(location.hash);
+          document.getElementById(location.hash).scrollIntoView();
           /*exit the function:*/
           return;
 
