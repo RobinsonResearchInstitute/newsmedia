@@ -179,6 +179,7 @@
                 initSlides();
                 linkButtons();
                 readMoreButtons();
+                if (location.hash) location.href = location.hash;
                 
               }
               if (this.status == 404) { z.innerHTML = "Page not found."; }
