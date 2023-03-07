@@ -94,14 +94,14 @@
 
   <div id="controlButtons">
 
-    <!--<div id="socialButtons">
+    <div id="socialButtons">
       <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
     <script type="IN/Share" data-url="https://robinson.ac.nz/newsmedia"></script>
     
     <div class="fb-share-button" data-href="https://robinson.ac.nz/newsmedia/" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Frobinson.ac.nz%2Fnewsmedia%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
     <span><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-url="https://robinson.ac.nz/newsmedia/" data-show-count="false">Tweet</a></span>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </div>-->
+    </div>
   
 
   <div id="badgeControl">
@@ -185,13 +185,19 @@
                 linkButtons();
                 readMoreButtons();
                 
-                /*if (location.hash) self.location.href = location.hash;*/
+                //causes a loop in chrome
+                /*if (location.hash) self.location.href = location.hash;*/ 
+                
+                //kind of works
                 console.log(location.hash.substring(1));
                 if(location.hash) {
                   let anchor = document.getElementById(location.hash.substring(1));
                   if(anchor) anchor.scrollIntoView(true);
-                }  
+                } 
                
+               
+                
+
               
                 
               }
@@ -248,9 +254,18 @@
 
       // When the user clicks on the button, scroll to the top of the document
       function topFunction() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-      }
+        //document.body.scrollTop = 0; // For Safari
+        //document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+         url = new URL(window.location);
+        url.hash = '';
+        history.pushState('', document.title, url);
+        /*window.scrollTo({
+          top: 0,
+          left: 0,
+          behavior: 'smooth'
+        });*/
+        document.documentElement.scrollTop = 0;
+            }
 
       function linkButtons(){
       const buttons = document.getElementsByClassName('copybutton')
