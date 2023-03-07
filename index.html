@@ -33,7 +33,11 @@
   <link rel="stylesheet" href="slideshow.css">
   <link rel="stylesheet" href="style3.css">
   <script src="slideshow3.js"></script>
-  
+  <!--<script type="text/javascript">
+    window.addEventListener('load', function() {
+       if (location.hash) location.href = location.hash;
+    });
+</script>-->
 
 </head>
 
@@ -90,14 +94,14 @@
 
   <div id="controlButtons">
 
-    <div id="socialButtons">
+    <!--<div id="socialButtons">
       <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
     <script type="IN/Share" data-url="https://robinson.ac.nz/newsmedia"></script>
     
     <div class="fb-share-button" data-href="https://robinson.ac.nz/newsmedia/" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Frobinson.ac.nz%2Fnewsmedia%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
     <span><a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-url="https://robinson.ac.nz/newsmedia/" data-show-count="false">Tweet</a></span>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-    </div>
+    </div>-->
   
 
   <div id="badgeControl">
@@ -180,7 +184,15 @@
                 initSlides();
                 linkButtons();
                 readMoreButtons();
-                /*if (location.hash) location.href = location.hash;*/
+                
+                /*if (location.hash) self.location.href = location.hash;*/
+                console.log(location.hash.substring(1));
+                if(location.hash) {
+                  let anchor = document.getElementById(location.hash.substring(1));
+                  if(anchor) anchor.scrollIntoView(true);
+                }  
+               
+              
                 
               }
               if (this.status == 404) { z.innerHTML = "Page not found."; }
@@ -189,6 +201,7 @@
           }
           xhttp.open("GET", file, true);
           xhttp.send();
+          
           /*exit the function:*/
           return;
 
