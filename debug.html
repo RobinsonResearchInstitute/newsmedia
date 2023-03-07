@@ -185,12 +185,15 @@
                 linkButtons();
                 readMoreButtons();
                 
-                /*if (location.hash) self.location.href = location.hash;*/
-                console.log(location.hash.substring(1));
+                //causes a loop in chrome
+                /*if (location.hash) self.location.href = location.hash;*/ 
+                
+                //kind of works
+                /*console.log(location.hash.substring(1));
                 if(location.hash) {
                   let anchor = document.getElementById(location.hash.substring(1));
                   if(anchor) anchor.scrollIntoView(true);
-                }  
+                }*/  
                
               
                 
