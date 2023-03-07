@@ -259,11 +259,12 @@
          url = new URL(window.location);
         url.hash = '';
         history.pushState('', document.title, url);
-        window.scrollTo({
+        /*window.scrollTo({
           top: 0,
           left: 0,
           behavior: 'smooth'
-        });
+        });*/
+        document.documentElement.scrollTop = 0;
             }
 
       function linkButtons(){
