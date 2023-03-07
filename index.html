@@ -126,6 +126,7 @@
         url.search = new URLSearchParams({
           year: element.innerHTML
         });
+        url.hash = "";
         history.pushState('', document.title, url);
         includeHTML(document.getElementById(element.innerHTML), 'media_' + element.innerHTML + '.html');
         console.log("Reload");
