@@ -186,11 +186,7 @@
                 readMoreButtons();
                 
                 /*if (location.hash) location.href = location.hash;*/
-                console.log(location.hash.substring(1));
-                if(location.hash) {
-                  let anchor = document.getElementById(location.hash.substring(1));
-                  if(anchor) anchor.scrollIntoView();
-                }  
+               
               
                 
               }
@@ -200,6 +196,13 @@
           }
           xhttp.open("GET", file, true);
           xhttp.send();
+          
+           console.log(location.hash.substring(1));
+                if(location.hash) {
+                  let anchor = document.getElementById(location.hash.substring(1));
+                  if(anchor) anchor.scrollIntoView();
+                }  
+          
           /*exit the function:*/
           return;
 
