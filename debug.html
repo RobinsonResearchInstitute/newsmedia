@@ -192,7 +192,7 @@
                 console.log(location.hash.substring(1));
                 if(location.hash) {
                   let anchor = document.getElementById(location.hash.substring(1));
-                  if(anchor) setTimeOut(anchor.scrollIntoView(true),1000);
+                  if(anchor) anchor.scrollIntoView(true);
                 } 
                
                
