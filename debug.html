@@ -195,6 +195,11 @@
                   if(anchor) anchor.scrollIntoView(true);
                 }*/  
                
+                if(location.hash) {
+                  window.location = (""+window.location).replace(/#[A-Za-z0-9_]*$/,'')+location.hash
+                }
+                
+
               
                 
               }
