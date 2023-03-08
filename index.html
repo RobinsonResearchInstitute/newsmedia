@@ -398,7 +398,13 @@
               content.style.maxHeight = null;
             } else {
               content.style.maxHeight = content.scrollHeight + "px";
-            } 
+            }
+            if(this.classList.contains("active")){
+              this.innerHTML="Read less";
+            }
+            else{
+              this.innerHTML="Read more";
+            }  
           });
         }
       }      
