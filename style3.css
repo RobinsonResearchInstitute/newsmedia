@@ -370,6 +370,7 @@ margin-left:auto;
 margin-right:auto;
 width:90%;
 height:auto;
+padding:1rem;
 }
 
 .search-container {
@@ -532,6 +533,25 @@ input:checked+.slider:before {
   font-family:'FontAwesome';
   font-weight:400;
   content:' \f0c1';
+}
+
+
+.centre{
+  text-align:center;
+  max-width:60%;
+  margin-left:auto;
+  margin-right:auto;
+  padding:0.5rem;
+}
+
+.vuw_green{
+  color:var(--vuw_green,rgb(0,71,48));
+}
+
+.dark .vuw_green{
+  color:#ddd;
+  background-color:var(--vuw_green,rgb(0,71,48));
+  padding:0.5rem;
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
