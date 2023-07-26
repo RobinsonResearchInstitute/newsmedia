@@ -364,7 +364,7 @@ align-items: center;
   background-color: #333; /* Add a dark-grey background on hover */
 }
 
-#myVideo{
+video {
 display:block;
 margin-left:auto;
 margin-right:auto;
@@ -372,6 +372,8 @@ width:90%;
 height:auto;
 padding:1rem;
 }
+
+
 
 .search-container {
   float: right;
