@@ -167,7 +167,7 @@ p a:hover{
   width:80%;
 }
 
-.originalsize{
+.card .originalsize{
     width:auto;
     max-width:80%;
   }
