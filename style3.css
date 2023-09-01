@@ -167,6 +167,10 @@ p a:hover{
   width:80%;
 }
 
+.originalsize{
+    width:auto;
+    max-width:80%;
+  }
 
 
 .iframecontainer {
