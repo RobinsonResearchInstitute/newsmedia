@@ -271,6 +271,8 @@ align-items: center;
   line-height:1.5;
   /*padding-left:1.9rem;
   padding-right:1.9rem;*/
+  text-align: justify;
+  text-justify: inter-word;
 }
   
 .card h2{
