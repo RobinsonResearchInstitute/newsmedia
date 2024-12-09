@@ -160,6 +160,15 @@ p a:hover{
   background-color:white;
 }
 
+li a{
+    color:rgb(0,130,63);
+}
+
+li a:hover{
+  background-color:white;
+}
+
+
 .card img{
   display:block;
   margin-left:auto;
