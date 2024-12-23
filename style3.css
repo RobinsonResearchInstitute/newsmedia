@@ -363,6 +363,7 @@ align-items: center;
   position: relative;
   margin-top: 1.25rem;
   left: 50%; /* Place the button 30px from the right */
+  transform: translate(-50%, 0%); /* Centers the button */
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
