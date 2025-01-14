@@ -756,3 +756,11 @@ input:checked+.slider:before {
     width: 12px;
 
 }
+
+.dark .x-social{
+  border:1px solid grey;
+  padding-left:15px;
+  padding-right:15px;
+  padding-top:6px;
+  padding-bottom:5px;
+}
