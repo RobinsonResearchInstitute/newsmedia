@@ -369,11 +369,11 @@ li a:hover {
     /* Text color */
     cursor: pointer;
     /* Add a mouse pointer on hover */
-    padding: 0.9rem;
+    padding: 1rem;
     /* Some padding */
-    border-radius: 0.6rem;
+    /*border-radius: 0.6rem;*/
     /* Rounded corners */
-    font-size: 1.125rem;
+    font-size: 1.2rem;
     /* Increase font size */
 }
 
@@ -764,3 +764,4 @@ input:checked+.slider:before {
   padding-top:6px;
   padding-bottom:5px;
 }
+
