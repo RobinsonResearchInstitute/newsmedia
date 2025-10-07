@@ -93,6 +93,26 @@ a.homeButton img {
     background-color: rgb(0, 71, 48);
 }
 
+div.scrollmenu {
+  /*background-color: #dc1919;*/
+  overflow: auto;
+  white-space: nowrap;
+  max-width: calc(100% - 450px);
+  display:inline-block;
+}
+
+div.scrollmenu a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  /*padding: 14px;*/
+  padding: 0.9rem 1rem;
+  text-decoration: none;
+
+}
+
+
+
 /* Dropdown content (hidden by default) */
 .dropdown-content {
     display: none;
@@ -683,6 +703,10 @@ input:checked+.slider:before {
         margin-bottom: 0;
     }
 
+    div.scrollmenu {
+      /*max-width: calc(100% - 100px);*/
+      all:revert;
+    }
 }
 
 .collapsible {
@@ -764,4 +788,5 @@ input:checked+.slider:before {
   padding-top:6px;
   padding-bottom:5px;
 }
+
 
