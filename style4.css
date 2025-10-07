@@ -21,7 +21,7 @@ body {
 }
 
 /* Style the links inside the navigation bar */
-.topnav a {
+/*.topnav a {
     float: left;
     display: block;
     color: white;
@@ -29,6 +29,7 @@ body {
     padding: 0.9rem 1rem;
     text-decoration: none;
 }
+*/
 
 /* Change the color of links on hover */
 .topnav a:hover:not(.active) {
@@ -785,6 +786,7 @@ input:checked+.slider:before {
   padding-top:6px;
   padding-bottom:5px;
 }
+
 
 
 
