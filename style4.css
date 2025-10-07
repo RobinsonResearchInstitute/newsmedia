@@ -703,10 +703,7 @@ input:checked+.slider:before {
         margin-bottom: 0;
     }
 
-    div.scrollmenu {
-      /*max-width: calc(100% - 100px);*/
-      all:revert;
-    }
+   
 }
 
 .collapsible {
@@ -788,5 +785,6 @@ input:checked+.slider:before {
   padding-top:6px;
   padding-bottom:5px;
 }
+
 
 
